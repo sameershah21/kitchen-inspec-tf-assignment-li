@@ -1,0 +1,23 @@
+driver:
+  name: terraform
+  root_module_directory: test/fixtures
+  command_timeout: 1000
+
+provisioner:
+  name: terraform
+
+verifier:
+  name: terraform
+  groups:
+    - name: container
+      controls:
+        - operating_system
+      port: 2222
+
+
+
+platforms:
+  - name: ubuntu
+
+suites:
+  - name: default

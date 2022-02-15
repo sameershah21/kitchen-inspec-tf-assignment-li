@@ -1,0 +1,18 @@
+name: default
+title: Inspec Profile for AWS S3
+maintainer: Sameer Shah
+license: Sameer Shah, all rights reserved
+summary: An InSpec compliance profile
+version: 0.1.0
+inspec_version: '= 4.52.9'
+attributes:
+- name : bucket_name
+  required: true
+  description: "Bucket Name"
+  type: String
+depends:
+  - name: inspec-aws
+    url: https://github.com/inspec/inspec-aws/archive/refs/tags/v1.80.7.tar.gz
+supports:
+    -platform: aws
+

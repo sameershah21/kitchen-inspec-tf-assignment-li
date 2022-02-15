@@ -1,0 +1,9 @@
+---
+last_action: setup
+last_error: Kitchen::ActionFailed
+kitchen_terraform_outputs:
+  bucket_name:
+    sensitive: false
+    type: string
+    value: arn:aws:s3:::terraform-20220214233144565300000001
+kitchen_terraform_variables: {}
