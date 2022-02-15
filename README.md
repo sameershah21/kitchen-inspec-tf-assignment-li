@@ -21,6 +21,9 @@ Assignment to setup s3 storage in AWS using **Terraform + Kitchen + Inspec**
  - I usually use reference terraform modules from a seperate github repository using tag and/or branch reference. However, since this setup is an assignment, I have kept module references within the same repositories as local folder.
  - Kitchen files are in Kitchen folder
  - Inspec tests are written in rb
+ - To RUN
+   - Make sure the IAM User profile has the right access roles assigned -s3, SNS, KMS access is required.
+   - Goto staging folder and run `kitchen verify`. When done running and testing, run 'kitchen destroy'
 
 # Folder Setup
  - Root folder contains `pre-commit-config.yaml` which defines all pre-commit hooks
@@ -43,10 +46,7 @@ I have included a Dockerfile if you would like to run this in a sandboxed env. P
   - `docker build -t terraform-test-run .`: Builds docker with ssh and exposes port 22
   - `docker run -d -p 2222:22 terraform-test-run`: Runs docker container with port mapped to 2222
 
-# Reasoning
-
-
-- Inspec
+# Reasoning for using Chef Inspec
   - Pros
       - Good enough documentation and has good support. I checked couple of issues/questions and there were quick responses from the service support. Also, their Github Issues are being treacked and resolved quickly.
       - Can perform most of the operations from simple to complex. For example this link shows many examples where complex test cases are being checked: https://megamorf.gitlab.io/cheat-sheets/inspec/
