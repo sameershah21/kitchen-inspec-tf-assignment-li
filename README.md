@@ -38,7 +38,7 @@ Assignment to setup s3 storage in AWS using **Terraform + Kitchen + Inspec**
   - `cd staging`
   - `pre-commit run -a` Make sure to execute as many times as it takes to pass all tests
   - In AWS or when using idenity provider like Okta, make sure the IAM User profile has the right access roles assigned -s3, SNS, KMS access is required.
-  - Goto staging folder and run `kitchen verify`. If you make changes to terraform, run 'kitchen converge'. Finally, when done running and testing, run 'kitchen destroy'
+  - Goto staging folder and run `kitchen verify`. If you make changes to terraform, run `kitchen converge`. Finally, when done running and testing, run `kitchen destroy`
 
 # Docker setup
 I have included a Dockerfile if you would like to run this in a sandboxed env. Purely optional.
