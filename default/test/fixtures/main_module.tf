@@ -9,7 +9,7 @@ module "for_staging_env" {
 
 output "bucket_name" {
   description = "Name of the bucket created"
-  value = module.for_staging_env.bucket_name
+  value       = module.for_staging_env.bucket_name
 }
 # Similar to above, we can call the module from the production(symlinked folder).
 //module "for_production_env" {

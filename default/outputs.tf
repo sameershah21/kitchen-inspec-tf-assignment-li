@@ -1,4 +1,4 @@
 output "bucket_name" {
   description = "ARN of the bucket created"
-  value = aws_s3_bucket.bucket.id
+  value       = aws_s3_bucket.bucket.id
 }

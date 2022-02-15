@@ -16,13 +16,13 @@ terraform {
 
 #region based default provider
 provider "aws" {
-  region  = "us-west-2"
+  region = "us-west-2"
   #profile = "staging"
 }
 
 provider "aws" {
-  region  = "us-east-1"
-  alias   = "us-east-1"
+  region = "us-east-1"
+  alias  = "us-east-1"
   #profile = "staging"
 }
 
