@@ -1,54 +1,10 @@
-I, [2022-02-15T07:08:26.232573 #9393]  INFO -- default-terraform: -----> Verifying <default-terraform>...
-I, [2022-02-15T07:08:26.233483 #9393]  INFO -- default-terraform: Preparing files for transfer
-I, [2022-02-15T07:08:26.245286 #9393]  INFO -- default-terraform: [SSH] connection failed, retrying in 1 seconds (#<Errno::ECONNREFUSED: Connection refused - connect(2) for [::1]:22>)
-I, [2022-02-15T07:08:27.248157 #9393]  INFO -- default-terraform: [SSH] connection failed, retrying in 1 seconds (#<Errno::ECONNREFUSED: Connection refused - connect(2) for [::1]:22>)
-I, [2022-02-15T07:08:28.255626 #9393]  INFO -- default-terraform: [SSH] connection failed, retrying in 1 seconds (#<Errno::ECONNREFUSED: Connection refused - connect(2) for [::1]:22>)
-I, [2022-02-15T07:08:29.257874 #9393]  INFO -- default-terraform: [SSH] connection failed, retrying in 1 seconds (#<Errno::ECONNREFUSED: Connection refused - connect(2) for [::1]:22>)
-W, [2022-02-15T07:08:30.263264 #9393]  WARN -- default-terraform: [SSH] connection failed, terminating (#<Errno::ECONNREFUSED: Connection refused - connect(2) for [::1]:22>)
-E, [2022-02-15T07:08:30.281539 #9393] ERROR -- default-terraform: Verify failed on instance <default-terraform>.
-E, [2022-02-15T07:08:30.281685 #9393] ERROR -- default-terraform: ------Exception-------
-E, [2022-02-15T07:08:30.281714 #9393] ERROR -- default-terraform: Class: Kitchen::ActionFailed
-E, [2022-02-15T07:08:30.281734 #9393] ERROR -- default-terraform: Message: SSH session could not be established
-E, [2022-02-15T07:08:30.281751 #9393] ERROR -- default-terraform: ----------------------
-E, [2022-02-15T07:08:30.281768 #9393] ERROR -- default-terraform: ------Backtrace-------
-E, [2022-02-15T07:08:30.281784 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/verifier/base.rb:87:in `rescue in call'
-E, [2022-02-15T07:08:30.281801 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/verifier/base.rb:86:in `call'
-E, [2022-02-15T07:08:30.281818 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:469:in `block in verify_action'
-E, [2022-02-15T07:08:30.281835 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:563:in `synchronize_or_call'
-E, [2022-02-15T07:08:30.281852 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:524:in `block in action'
-E, [2022-02-15T07:08:30.281869 #9393] ERROR -- default-terraform: /opt/chef-workstation/embedded/lib/ruby/3.0.0/benchmark.rb:293:in `measure'
-E, [2022-02-15T07:08:30.281900 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:523:in `action'
-E, [2022-02-15T07:08:30.281920 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:461:in `verify_action'
-E, [2022-02-15T07:08:30.281937 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
-E, [2022-02-15T07:08:30.281954 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
-E, [2022-02-15T07:08:30.281971 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:391:in `block in transition_to'
-E, [2022-02-15T07:08:30.281988 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `each'
-E, [2022-02-15T07:08:30.282004 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `transition_to'
-E, [2022-02-15T07:08:30.282022 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:161:in `verify'
-E, [2022-02-15T07:08:30.282059 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `public_send'
-E, [2022-02-15T07:08:30.282078 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `run_action_in_thread'
-E, [2022-02-15T07:08:30.282100 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
-E, [2022-02-15T07:08:30.282118 #9393] ERROR -- default-terraform: ----End Backtrace-----
-E, [2022-02-15T07:08:30.282134 #9393] ERROR -- default-terraform: ---Nested Exception---
-E, [2022-02-15T07:08:30.282153 #9393] ERROR -- default-terraform: Class: Kitchen::Transport::SshFailed
-E, [2022-02-15T07:08:30.282169 #9393] ERROR -- default-terraform: Message: SSH session could not be established
-E, [2022-02-15T07:08:30.282185 #9393] ERROR -- default-terraform: ----------------------
-E, [2022-02-15T07:08:30.282201 #9393] ERROR -- default-terraform: ------Backtrace-------
-E, [2022-02-15T07:08:30.282217 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/verifier/base.rb:87:in `rescue in call'
-E, [2022-02-15T07:08:30.282233 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/verifier/base.rb:86:in `call'
-E, [2022-02-15T07:08:30.282250 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:469:in `block in verify_action'
-E, [2022-02-15T07:08:30.282266 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:563:in `synchronize_or_call'
-E, [2022-02-15T07:08:30.282283 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:524:in `block in action'
-E, [2022-02-15T07:08:30.282300 #9393] ERROR -- default-terraform: /opt/chef-workstation/embedded/lib/ruby/3.0.0/benchmark.rb:293:in `measure'
-E, [2022-02-15T07:08:30.282316 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:523:in `action'
-E, [2022-02-15T07:08:30.282333 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:461:in `verify_action'
-E, [2022-02-15T07:08:30.282349 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
-E, [2022-02-15T07:08:30.282366 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
-E, [2022-02-15T07:08:30.282383 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:391:in `block in transition_to'
-E, [2022-02-15T07:08:30.282399 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `each'
-E, [2022-02-15T07:08:30.282416 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `transition_to'
-E, [2022-02-15T07:08:30.282432 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:161:in `verify'
-E, [2022-02-15T07:08:30.282448 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `public_send'
-E, [2022-02-15T07:08:30.282468 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `run_action_in_thread'
-E, [2022-02-15T07:08:30.282485 #9393] ERROR -- default-terraform: /Users/sameershah/.chefdk/gem/ruby/3.0.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
-E, [2022-02-15T07:08:30.282516 #9393] ERROR -- default-terraform: ----End Backtrace-----
+I, [2022-02-15T07:34:17.040515 #9753]  INFO -- default-terraform: -----> Verifying <default-terraform>...
+W, [2022-02-15T07:34:17.040971 #9753]  WARN -- default-terraform: Reading the Terraform input variables from the Kitchen instance state...
+W, [2022-02-15T07:34:17.041053 #9753]  WARN -- default-terraform: Finished reading the Terraform input variables from the Kitchen instance state.
+W, [2022-02-15T07:34:17.041102 #9753]  WARN -- default-terraform: Reading the Terraform output variables from the Kitchen instance state...
+W, [2022-02-15T07:34:17.041150 #9753]  WARN -- default-terraform: Finished reading the Terraform output variables from the Kitchen instance state.
+W, [2022-02-15T07:34:17.041191 #9753]  WARN -- default-terraform: Verifying the systems...
+W, [2022-02-15T07:34:17.041329 #9753]  WARN -- default-terraform: Verifying the 'aws' system...
+W, [2022-02-15T07:34:28.923430 #9753]  WARN -- default-terraform: Finished verifying the 'aws' system.
+W, [2022-02-15T07:34:28.923512 #9753]  WARN -- default-terraform: Finished verifying the systems.
+I, [2022-02-15T07:34:28.924018 #9753]  INFO -- default-terraform: Finished verifying <default-terraform> (0m11.88s).

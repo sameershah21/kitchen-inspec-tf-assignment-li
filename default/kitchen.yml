@@ -8,16 +8,14 @@ provisioner:
 
 verifier:
   name: terraform
-  groups:
-    - name: container
+  systems:
+    - name: aws
+      backend: aws
       controls:
-        - operating_system
-      port: 2222
-
-
+        - bucket-test-cases
 
 platforms:
-  - name: ubuntu
+  - name: terraform
 
 suites:
   - name: default

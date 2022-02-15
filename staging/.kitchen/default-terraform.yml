@@ -1,6 +1,6 @@
 ---
-last_action: setup
-last_error: Kitchen::ActionFailed
+last_action: verify
+last_error: 
 kitchen_terraform_outputs:
   bucket_name:
     sensitive: false
