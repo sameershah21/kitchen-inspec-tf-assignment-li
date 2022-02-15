@@ -21,9 +21,7 @@ Assignment to setup s3 storage in AWS using **Terraform + Kitchen + Inspec**
  - I usually use reference terraform modules from a seperate github repository using tag and/or branch reference. However, since this setup is an assignment, I have kept module references within the same repositories as local folder.
  - Kitchen files are in Kitchen folder
  - Inspec tests are written in rb
- - To RUN
-   - Make sure the IAM User profile has the right access roles assigned -s3, SNS, KMS access is required.
-   - Goto staging folder and run `kitchen verify`. When done running and testing, run 'kitchen destroy'
+
 
 # Folder Setup
  - Root folder contains `pre-commit-config.yaml` which defines all pre-commit hooks
@@ -39,6 +37,8 @@ Assignment to setup s3 storage in AWS using **Terraform + Kitchen + Inspec**
 - We are assuming that we are deploying the aws objects using terraform in staging account. Hence
   - `cd staging`
   - `pre-commit run -a` Make sure to execute as many times as it takes to pass all tests
+  - In AWS or when using idenity provider like Okta, make sure the IAM User profile has the right access roles assigned -s3, SNS, KMS access is required.
+  - Goto staging folder and run `kitchen verify`. If you make changes to terraform, run 'kitchen converge'. Finally, when done running and testing, run 'kitchen destroy'
 
 # Docker setup
 I have included a Dockerfile if you would like to run this in a sandboxed env. Purely optional.

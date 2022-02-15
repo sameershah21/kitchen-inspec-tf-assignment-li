@@ -31,7 +31,7 @@ resource "aws_s3_bucket_acl" "bucket_acl" {
 
 #create an sns topic which will publish the s3 object creation notification to its subscribers. Also, make sure, that only s3 buckets can publish
 resource "aws_sns_topic" "sns_topic" {
-  name = local.topic_name #"s3-event-notification-topic"
+  name = local.topic_name
 
   policy = <<POLICY
 {
@@ -64,7 +64,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 resource "aws_sns_topic_subscription" "sns-topic" {
   topic_arn              = aws_sns_topic.sns_topic.arn
   protocol               = "email"
-  endpoint               = local.email_address_for_subscriber
+  endpoint               = "sameeryam21@gmail.com"#local.email_address_for_subscriber
   endpoint_auto_confirms = true
 }
 
