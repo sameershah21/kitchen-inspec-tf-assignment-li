@@ -13,7 +13,6 @@ Assignment to setup s3 storage in AWS using **Terraform + Kitchen + Inspec**
 | Pre-commit terraform latest version |  https://github.com/antonbabenko/pre-commit-terraform | This has added terraform hooks for TFLint, checkov, format, and more.
 | Gem: test-kitchen | command: `chef gem install test-kitchen` | Driver to create terraform infra
 | Gem: kitchen-terraform | command: `chef gem install kitchen-terraform` | Plugin to allow terraform code test using kitchen
-| Docker Setup | | The kitchen terraform will be running on a docker container. Instruction to build it are below
 
 - At the time of writing, I am referencing the latest version of aws providers, pre-commit-hooks and pre-commit-terraform.
 
@@ -39,16 +38,23 @@ Assignment to setup s3 storage in AWS using **Terraform + Kitchen + Inspec**
   - `pre-commit run -a` Make sure to execute as many times as it takes to pass all tests
 
 # Docker setup
-- cd into Docker folder and run following ocmmands:
+I have included a Dockerfile if you would like to run this in a sandboxed env. Purely optional.
+- cd into Docker folder and run following commands:
   - `docker build -t terraform-test-run .`: Builds docker with ssh and exposes port 22
   - `docker run -d -p 2222:22 terraform-test-run`: Runs docker container with port mapped to 2222
+
 # Reasoning
 
 
 - Inspec
-    - Enterprise support
-    - Can test any target locally or remotely(via SSH).
-    -
+  - Pros
+      - Good enough documentation and has good support. I checked couple of issues/questions and there were quick responses from the service support. Also, their Github Issues are being treacked and resolved quickly.
+      - Can perform most of the operations from simple to complex. For example this link shows many examples where complex test cases are being checked: https://megamorf.gitlab.io/cheat-sheets/inspec/
+      - Can test any target locally or remotely(via SSH) or within Docker container.
+      - Feels more mature compared to others like terratest
+  - Cons
+    - Like most of the Chef product, need to understand Ruby to write test cases in it. Didn't find easy way to use Python to write test cases.
+    - Need some time and troubleshooting to get around limitations for example Key Value pair comparisons felt buggy. I was using a simple 'should eq' comparison for tags and did not work. Check out test cases file for my workaround.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
