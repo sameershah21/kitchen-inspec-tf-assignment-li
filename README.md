@@ -49,3 +49,8 @@ Assignment to setup s3 storage in AWS using **Terraform + Kitchen + Inspec**
     - Enterprise support
     - Can test any target locally or remotely(via SSH).
     -
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

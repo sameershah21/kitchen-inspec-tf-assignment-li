@@ -1,3 +1,0 @@
-I, [2022-02-15T07:34:14.870248 #9753]  INFO -- Kitchen: -----> Starting Test Kitchen (v3.2.2)
-I, [2022-02-15T07:34:17.040428 #9753]  INFO -- Kitchen: -----> Verifying <default-terraform>...
-I, [2022-02-15T07:34:28.924137 #9753]  INFO -- Kitchen: -----> Test Kitchen is finished. (0m14.05s)

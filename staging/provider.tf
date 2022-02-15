@@ -2,9 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "4.0.0"
-
-      # using specific version to make sure infra tests don't fail.
+      version = "4.0.0" # using specific version to make sure infra tests don't fail.
     }
   }
   #Use remote state for setting state in real life scenario, however for this assignment, emphasis is on the setup, hence using local state

@@ -1,9 +1,0 @@
----
-last_action: verify
-last_error: 
-kitchen_terraform_outputs:
-  bucket_name:
-    sensitive: false
-    type: string
-    value: arn:aws:s3:::terraform-20220214233144565300000001
-kitchen_terraform_variables: {}
