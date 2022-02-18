@@ -11,7 +11,6 @@ locals {
     service  = var.service
     function = var.function
   }, var.audit_tags)
-
   topic_name                   = var.topic_name
   email_address_for_subscriber = var.email_address_for_subscriber
 }
@@ -64,7 +63,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 resource "aws_sns_topic_subscription" "sns-topic" {
   topic_arn              = aws_sns_topic.sns_topic.arn
   protocol               = "email"
-  endpoint               = "sameeryam21@gmail.com"#local.email_address_for_subscriber
+  endpoint               = local.email_address_for_subscriber
   endpoint_auto_confirms = true
 }
 

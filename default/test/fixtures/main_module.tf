@@ -4,6 +4,8 @@ module "for_staging_env" {
   audit_tags = {
     "Audited" = "True" # Changing this to any other value will make the test case to fail.
   }
+  topic_name                   = "s3-event-notification-topic"
+  email_address_for_subscriber = "<enter your email address here>"
 
 }
 
@@ -17,6 +19,8 @@ output "bucket_name" {
 //  audit_tags = {
 //    "Audited" = "True" # Changing this to any other value will make the test case to fail.
 //  }
+//    topic_name                   = "<another-topic-name>"
+//    email_address_for_subscriber = "<another-email>"
 //
 //}
 //
